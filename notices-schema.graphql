@@ -1,0 +1,9 @@
+type Notice @key(fields: "id") {
+  id: ID!
+  title: String
+  description: String
+}
+extend type User @key(fields: "id") {
+  id: ID! @external
+  notices: [Notice]
+}

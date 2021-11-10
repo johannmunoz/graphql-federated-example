@@ -1,0 +1,7 @@
+node_modules/
+lib/
+dist/
+service-account*
+src/generated/graphql-types.ts
+.DS_Store
+.vscode

@@ -1,0 +1,42 @@
+{
+  "name": "graphql-federation-example",
+  "version": "1.0.0",
+  "scripts": {
+    "build-wp": "webpack",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "start": "node lib/index.js",
+    "start-wp": "node dist/main.js",
+    "start-alerts": "node lib/subgraphs/alerts/alerts-module.js",
+    "start-notices": "node lib/subgraphs/notices/notices-module.js",
+    "start-root": "node lib/subgraphs/root/root-module.js",
+    "start-users": "node lib/subgraphs/users/users-module.js",
+    "generate": "graphql-codegen --config codegen.yml"
+  },
+  "main": "lib/index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@apollo/federation": "^0.33.6",
+    "@apollo/gateway": "^0.42.3",
+    "apollo-server": "^3.4.0",
+    "dotenv": "^10.0.0",
+    "firebase-admin": "^9.3.0",
+    "graphql": "^15.7.1"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "2.2.2",
+    "@graphql-codegen/introspection": "2.1.0",
+    "@graphql-codegen/typescript": "^2.2.2",
+    "@graphql-codegen/typescript-resolvers": "2.4.0",
+    "@typescript-eslint/eslint-plugin": "^4.29.2",
+    "@typescript-eslint/parser": "^4.29.2",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.24.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "typescript": "^4.3.5",
+    "webpack": "^5.63.0",
+    "webpack-cli": "^4.9.1"
+  }
+}

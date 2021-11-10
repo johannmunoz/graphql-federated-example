@@ -1,0 +1,8 @@
+type Alert @key(fields: "id") {
+  id: ID!
+  message: String
+}
+extend type User @key(fields: "id") {
+  id: ID! @external
+  alerts: [Alert]
+}
