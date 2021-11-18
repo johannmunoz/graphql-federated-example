@@ -5,3 +5,5 @@ service-account*
 src/generated/graphql-types.ts
 .DS_Store
 .vscode
+supergraph.graphql
+**/graphql-types.ts

@@ -110,8 +110,8 @@ enum core__Purpose {
 scalar join__FieldSet
 
 enum join__Graph {
-  ALERTS @join__graph(name: "alerts" url: "http://localhost:4401/")
-  NOTICES @join__graph(name: "notices" url: "http://localhost:4402/")
-  ROOT @join__graph(name: "root" url: "http://localhost:4403/")
-  USERS @join__graph(name: "users" url: "http://localhost:4404/")
+  ALERTS @join__graph(name: "alerts" url: "http://alerts:4000/graphql")
+  NOTICES @join__graph(name: "notices" url: "http://notices:4000/graphql")
+  ROOT @join__graph(name: "root" url: "http://root:4000/graphql")
+  USERS @join__graph(name: "users" url: "http://users:4000/graphql")
 }

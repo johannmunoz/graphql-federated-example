@@ -1,0 +1,17 @@
+subgraphs:
+  alerts:
+    routing_url: http://alerts:4000/graphql
+    schema:
+      file: ./subgraphs/alerts/alerts-schema.graphql
+  notices:
+    routing_url: http://notices:4000/graphql
+    schema:
+      file: ./subgraphs/notices/notices-schema.graphql
+  users:
+    routing_url: http://users:4000/graphql
+    schema:
+      file: ./subgraphs/users/users-schema.graphql
+  root:
+    routing_url: http://root:4000/graphql
+    schema:
+      file: ./subgraphs/root/root-schema.graphql

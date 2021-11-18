@@ -1,0 +1,6 @@
+overwrite: true
+schema: ./alerts-schema.graphql
+generates:
+  src/graphql-types.ts:
+    plugins:
+      - "typescript"
