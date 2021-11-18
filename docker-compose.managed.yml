@@ -1,0 +1,21 @@
+version: '3'
+services:
+  router:
+    container_name: router
+    build: ./router
+    env_file: # create with make graph-api-env
+      - graph-api.env
+    ports:
+      - "4000:4000"
+  alerts:
+    container_name: alerts
+    build: ./subgraphs/alerts
+  notices:
+    container_name: notices
+    build: ./subgraphs/notices
+  root:
+    container_name: root
+    build: ./subgraphs/root
+  users:
+    container_name: users
+    build: ./subgraphs/users

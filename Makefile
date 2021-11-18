@@ -4,6 +4,9 @@ default: demo
 .PHONY: demo
 demo: supergraph docker-up docker-down
 
+.PHONY: demo-managed
+demo-managed: publish take-five docker-up-managed smoke docker-down
+
 .PHONY: docker-up
 docker-up:
 	docker-compose up -d
@@ -18,11 +21,11 @@ docker-up:
 # docker-build-force:
 # 	docker-compose build --no-cache --pull --parallel --progress plain
 
-# .PHONY: docker-up-managed
-# docker-up-managed:
-# 	docker-compose -f docker-compose.managed.yml up -d
-# 	@sleep 2
-# 	@docker logs router
+.PHONY: docker-up-managed
+docker-up-managed:
+	docker-compose -f docker-compose.managed.yml up -d
+	@sleep 2
+	@docker logs router
 
 # .PHONY: query
 # query:
@@ -47,17 +50,17 @@ config:
 compose:
 	.scripts/compose.sh
 
-# .PHONY: publish
-# publish:
-# 	.scripts/publish.sh
+.PHONY: publish
+publish:
+	.scripts/publish.sh
 
 # .PHONY: unpublish
 # unpublish:
 # 	.scripts/unpublish.sh
 
-# .PHONY: graph-api-env
-# graph-api-env:
-# 	@.scripts/graph-api-env.sh
+.PHONY: graph-api-env
+graph-api-env:
+	@.scripts/graph-api-env.sh
 
 # .PHONY: check-products
 # check-products:
@@ -174,7 +177,7 @@ compose:
 # docker-prune:
 # 	.scripts/docker-prune.sh
 
-# .PHONY: take-five
-# take-five:
-# 	@echo waiting for robots to finish work ...
-# 	@sleep 5
+.PHONY: take-five
+take-five:
+	@echo waiting for robots to finish work ...
+	@sleep 5

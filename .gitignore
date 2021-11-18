@@ -7,3 +7,4 @@ src/generated/graphql-types.ts
 .vscode
 supergraph.graphql
 **/graphql-types.ts
+graph-api.env
